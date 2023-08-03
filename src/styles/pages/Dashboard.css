@@ -1,0 +1,57 @@
+
+  
+  /* CSS สำหรับ Navbar */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* CSS สำหรับ Sidebar */
+aside {
+  background-color: #555;
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
