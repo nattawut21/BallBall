@@ -41,6 +41,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     }
 
     onLogin(username, password);
+    setError("Username หรือ Password ไม่ถูกต้อง")
   };
 
   return (

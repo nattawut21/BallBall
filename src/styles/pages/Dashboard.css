@@ -1,11 +1,8 @@
-
-  
-  /* CSS สำหรับ Navbar */
+/* CSS สำหรับ Navbar */
 nav {
   background-color: #333;
   color: #fff;
   padding: 10px;
-  
 }
 
 nav ul {
@@ -58,21 +55,4 @@ aside a:hover {
 .sidebar-item {
   border: 1px solid black;
   padding: 8px;
-}
-.table-container {
-  display: grid;
-  grid-template-columns: 1fr; /* ตั้งค่าคอลัมน์เดียวให้มีขนาดอัตโนมัติ */
-  gap: 16px; /* ระยะห่างระหว่างตารางและข้อความ */
-}
-
-table {
-  width: 100%; /* ตั้งค่าขนาดตารางให้เต็มขอบเต็มแถว */
-  border-collapse: collapse; /* ลบขอบตารางในคอลัมน์ที่มีช่องว่าง */
-}
-
-th,
-td {
-  padding: 8px; /* ตั้งค่าขอบเขตของข้อความในเซลล์ */
-  border: 1px solid #ccc; /* ตั้งค่ากรอบให้กับเซลล์ */
-  text-align: left; /* จัดชิดซ้ายในเซลล์ */
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
   return (
-    <aside style={{ height: "100vh" }}>
+    <aside>
       <div className="sidebar-item">Dashboard</div>
       <Link to="/user-setting">
         <div className="sidebar-item">UserSetting</div>
