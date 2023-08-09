@@ -1,0 +1,44 @@
+.popup {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex; /* เพิ่มส่วนนี้เพื่อทำให้รูปและข้อมูลอยู่ในแนวตั้ง */
+  flex-direction: column
+  
+}
+
+.popup img {
+  display: block;
+  margin: 0 auto;
+}
+
+.popup h4 {
+  text-align: center;
+}
+
+.popup p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.popup button {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.logout-button{
+    display: flex;
+    flex-direction: ro; 
+    
+}

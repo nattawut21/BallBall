@@ -1,0 +1,23 @@
+.employee-table {
+  display: flex;
+  flex: 1;
+}
+
+.table-card {
+  width: 100%;
+  /* padding: 10px 100px 50px 100px; */
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-group-inline {
+  margin-right: 50px;
+}
+
+.form-group-inline label {
+  display: block;
+  margin-bottom: 5px; 
+}

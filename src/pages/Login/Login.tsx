@@ -4,10 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-
   const handleLogin = (username: string, password: string) => {
-    // ตรวจสอบข้อมูลเข้าสู่ระบบ
-    if (username === "Atchanat" && password === "Password") {
+    if (username === "somrudee.y" && password === "Pass@09032002") {
       navigate("/dashboard");
     }
   };

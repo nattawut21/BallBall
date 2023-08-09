@@ -5,30 +5,36 @@ interface LoginFormProps {
   onLogin: (username: string, password: string) => void;
 }
 
+const usernameRegex = /^[\w.]*$/;
+const passwordRegex = /^[\w@]*$/;
+const invalidCharError = "ห้ามใส่อักขระพิเศษหรือวรรค";
+const missingFieldError = "กรุณากรอก Username และ Password";
+
 const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const validateInput = (inputValue: string, regex: RegExp) => {
+    if (!regex.test(inputValue)) {
+      setError(invalidCharError);
+      return false;
+    }
+    setError("");
+    return true;
+  };
+
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
-    const regex = /^\w*$/; // กำหนด Regular Expression ให้รองรับอักขระตัวอักศรและตัวเลขเท่านั้น
-    if (!regex.test(inputValue)) {
-      setError("ห้ามใส่อักขระพิเศษหรือวรรค");
-    } else {
+    if (validateInput(inputValue, usernameRegex)) {
       setUsername(inputValue);
-      setError("");
     }
   };
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
-    const regex = /^\w*$/; // กำหนด Regular Expression ให้รองรับอักขระตัวอักศรและตัวเลขเท่านั้น
-    if (!regex.test(inputValue)) {
-      setError("ห้ามใส่อักขระพิเศษหรือวรรค");
-    } else {
+    if (validateInput(inputValue, passwordRegex)) {
       setPassword(inputValue);
-      setError("");
     }
   };
 
@@ -36,19 +42,18 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     event.preventDefault();
 
     if (!username || !password) {
-      setError("กรุณากรอก Username และ Password");
+      setError(missingFieldError);
       return;
     }
 
     onLogin(username, password);
-    setError("Username หรือ Password ไม่ถูกต้อง")
   };
 
   return (
     <div className="container">
       <div className="card">
-        <form className="form-container" onSubmit={handleSubmit}>
-          <h1>Login</h1>
+        <form className="formContainer" onSubmit={handleSubmit}>
+          <h1>LOGO</h1>
           <div>
             <label htmlFor="username">Username:</label>
             <input
@@ -56,8 +61,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
               id="username"
               value={username}
               onChange={handleUsernameChange}
-              pattern="^\w*$"
-              title="ห้ามใส่อักขระพิเศษหรือวรรค"
+              pattern="^[\w.]*$"
+              title={invalidCharError}
             />
           </div>
           <div>
@@ -67,8 +72,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
               id="password"
               value={password}
               onChange={handlePasswordChange}
-              pattern="^\w*$"
-              title="ห้ามใส่อักขระพิเศษหรือวรรค"
+              pattern="^[\w@]*$"
+              title={invalidCharError}
             />
           </div>
           {error && <p className="error">{error}</p>}

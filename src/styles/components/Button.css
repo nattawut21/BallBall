@@ -1,0 +1,31 @@
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+.save-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  width: auto;
+  background-color: chartreuse;
+}
+.cancel-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    width: auto;
+    background-color: crimson;
+  }
+
+  .import-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    width: auto;
+    background-color: chartreuse;
+  }
+  .add-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    width: auto;
+    background-color: chartreuse;
+  }

@@ -1,49 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/pages/Dashboard/Navbar";
 import Sidebar from "@/pages/Dashboard/Sidebar";
-import "@/styles/pages/Dashboard.css";
+import "@/styles/components/Navbar.css";
+import "@/styles/components/Sidebar.css";
 import "@/styles/pages/UserSetting.css";
 
 const EmployeeTable: React.FC = () => {
   const employees = [
     {
       id: 1,
-      firstName: "John",
-      lastName: "Doe",
-      company: "ABC Inc.",
-      yearsOfWork: 5,
+      firstName: "Somrudee",
+      lastName: "Yibyok",
+      company: "Bluesea",
+      yearsOfWork: "10 years 6 months",
       role: "Manager",
       status: "Active",
     },
-    {
-      id: 2,
-      firstName: "Jane",
-      lastName: "Smith",
-      company: "XYZ Corp.",
-      yearsOfWork: 2,
-      role: "Developer",
-      status: "Active",
-    },
-    {
-      id: 3,
-      firstName: "Bob",
-      lastName: "Johnson",
-      company: "LMN Ltd.",
-      yearsOfWork: 3,
-      role: "Designer",
-      status: "Inactive",
-    },
   ];
 
-  // Function to handle Edit action
-  const handleEdit = (id: number) => {
-    // Implement the logic to handle Edit action here
-    console.log(`Edit employee with ID: ${id}`);
-  };
-
-  // Function to handle View Leave action
   const handleViewLeave = (id: number) => {
-    // Implement the logic to handle View Leave action here
     console.log(`View leave for employee with ID: ${id}`);
   };
 
@@ -58,10 +34,10 @@ const EmployeeTable: React.FC = () => {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Company</th>
-                  <th>Years of Work</th>
+                  <th>ชือ</th>
+                  <th>นามสกุล</th>
+                  <th>บริษัท</th>
+                  <th>อายุงาน</th>
                   <th>Role</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -78,11 +54,26 @@ const EmployeeTable: React.FC = () => {
                     <td>{employee.role}</td>
                     <td>{employee.status}</td>
                     <td>
-                      <button onClick={() => handleEdit(employee.id)}>
+                      <Link
+                        state={{
+                          id: 1,
+                          firstName: "Somrudee",
+                          lastName: "Yibyok",
+                          company: "Bluesea",
+                          yearsOfWork: "10 years 6 months",
+                          role: "Manager",
+                          status: "Active",
+                        }}
+                        to="/user-edit"
+                        className="edit-button"
+                      >
                         Edit
-                      </button>
+                      </Link>
+
                       <button onClick={() => handleViewLeave(employee.id)}>
-                        View Leave
+                        <Link to={`/view-leave/${employee.id}`}>
+                          View Leave
+                        </Link>
                       </button>
                     </td>
                   </tr>

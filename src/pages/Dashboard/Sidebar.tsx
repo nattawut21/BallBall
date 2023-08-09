@@ -8,8 +8,12 @@ const Sidebar: React.FC = () => {
       <Link to="/user-setting">
         <div className="sidebar-item">UserSetting</div>
       </Link>
+      <Link to="/user-setting">
       <div className="sidebar-item">TypeLeave</div>
+      </Link>
+      <Link to="/publicholiday">
       <div className="sidebar-item">Puilc Holiday</div>
+      </Link>
       <div className="sidebar-item">Time In</div>
       <div className="sidebar-item">Leave Policy</div>
       <div className="sidebar-item">Report</div>
