@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import Select from "react-select";
-import Navbar from "@/pages/Dashboard/Navbar";
-import Sidebar from "@/pages/Dashboard/Sidebar";
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
 import "@/styles/pages/EditUser.css";
 import "@/styles/components/navbar.css";
 import "@/styles/components/sidebar.css";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "@/pages/Dashboard/Navbar";
-import Sidebar from "@/pages/Dashboard/Sidebar";
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
 import "@/styles/components/Navbar.css";
 import "@/styles/components/Sidebar.css";
 import "@/styles/pages/UserSetting.css";
@@ -69,13 +69,12 @@ const EmployeeTable: React.FC = () => {
                       >
                         Edit
                       </Link>
-
                       <button onClick={() => handleViewLeave(employee.id)}>
-                        <Link to={`/view-leave/${employee.id}`}>
+                        <Link to={`/ViewLeave/`}>
                           View Leave
                         </Link>
                       </button>
-                    </td>
+                      </td>
                   </tr>
                 ))}
               </tbody>

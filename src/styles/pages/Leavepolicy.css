@@ -1,0 +1,19 @@
+
+/* App.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .img-container {
+    text-align: center;
+  }
+  
+
+  .employee-table th, .employee-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+  

@@ -1,0 +1,17 @@
+.table-navlink {
+  display: flex;
+  justify-content: center; /* จัดกล่องในแนวนอนศูนย์กลาง */
+}
+
+.card-row {
+  display: flex;
+  gap: 10px; /* ระยะห่างระหว่างกล่อง */
+}
+
+.cardlink {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  flex: 1; /* รักษาความกว้างเท่ากัน */
+  text-align: center;
+}

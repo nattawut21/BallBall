@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "@/pages/Dashboard/Navbar";
-import Sidebar from "@/pages/Dashboard/Sidebar";
-import "@/styles/components/Navbar.css";
-import "@/styles/components/Sidebar.css";
-import "@/styles/components/Popupadd.css";
-import "@/styles/pages/UserSetting.css";
-import { Button } from "@/components/public/base";
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
+import "@/styles/components/navbar.css";
+import "@/styles/components/sidebar.css";
+import "@/styles/components/popupadd.css";
+import "@/styles/pages/userSetting.css";
+
 import Popup from "./addPublicholiday";
 import EditPopup from "./editPublicholiday";
 
@@ -24,7 +24,7 @@ const PublicHoliday: React.FC = () => {
     id: 0,
     date: new Date(),
     description: "วันปีใหม่",
-    status: "Active",
+      status: "Active",
   });
   const [showPopup, setShowPopup] = useState(false);
   const [showEditPopup, setShowEditPopup] = useState(false);

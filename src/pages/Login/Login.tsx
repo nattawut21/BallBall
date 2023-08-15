@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const handleLogin = (username: string, password: string) => {
-    if (username === "somrudee.y" && password === "Pass@09032002") {
+    if (username === "1" && password === "1") {
       navigate("/dashboard");
     }
   };

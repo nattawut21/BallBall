@@ -1,10 +1,10 @@
 // นำเข้าโมดูลและคอมโพเนนต์ที่จำเป็น
 import React from "react";
-import Navbar from "@/pages/Dashboard/Navbar";
-import Sidebar from "@/pages/Dashboard/Sidebar";
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar"
 import "@/styles/pages/Dashboard.css";
 
-const Dashboard: React.FC = () => {
+const dashboard: React.FC = () => {
   return (
     <div>
       <Navbar />
@@ -18,4 +18,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default dashboard;
