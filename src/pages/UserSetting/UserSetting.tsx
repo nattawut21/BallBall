@@ -70,7 +70,7 @@ const EmployeeTable: React.FC = () => {
                         Edit
                       </Link>
                       <button onClick={() => handleViewLeave(employee.id)}>
-                        <Link to={`/ViewLeave/`}>
+                        <Link to={`/viewLeave/`}>
                           View Leave
                         </Link>
                       </button>

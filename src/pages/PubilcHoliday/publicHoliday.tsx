@@ -6,7 +6,7 @@ import Sidebar from "@/components/sidebar";
 import "@/styles/components/navbar.css";
 import "@/styles/components/sidebar.css";
 import "@/styles/components/popupadd.css";
-import "@/styles/pages/userSetting.css";
+
 
 import Popup from "./addPublicholiday";
 import EditPopup from "./editPublicholiday";
@@ -24,7 +24,7 @@ const PublicHoliday: React.FC = () => {
     id: 0,
     date: new Date(),
     description: "วันปีใหม่",
-      status: "Active",
+    status: "Active",
   });
   const [showPopup, setShowPopup] = useState(false);
   const [showEditPopup, setShowEditPopup] = useState(false);
@@ -75,10 +75,10 @@ const PublicHoliday: React.FC = () => {
         <div className="employee-table">
           <div className="table-card">
             <h2>ปี2566 </h2>
-            <div className="button-group ">
-              <button className="import-button">import</button>
+            <div className="button-group">
+              <button className="import-button">Import</button>
               <button className="add-button" onClick={() => setShowPopup(true)}>
-                ADD
+                Add
               </button>
             </div>
 

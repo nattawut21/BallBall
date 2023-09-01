@@ -5,6 +5,7 @@ import Sidebar from "@/components/sidebar"
 import "@/styles/components/Navbar.css";
 import "@/styles/components/Sidebar.css";
 import "@/styles/pages/Report.css";
+
 import * as XLSX from "xlsx";
 
 interface Employee {
@@ -133,6 +134,7 @@ const EmployeeTable: React.FC = () => {
         <Sidebar />
         <div className="employee-table">
           <div className="table-card">
+          <div className="button-group">
             <div className="table-search">
               <input
                 type="text"
@@ -142,6 +144,7 @@ const EmployeeTable: React.FC = () => {
               />
               <button>PDF</button>
               <button onClick={handleExportExcel}>ส่งออกเป็น Excel</button>
+            </div>
             </div>
             <table>
               <thead>

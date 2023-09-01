@@ -6,8 +6,7 @@ import "@/styles/components/Navbar.css";
 import "@/styles/components/Sidebar.css";
 import "@/styles/pages/Report.css";
 import * as XLSX from "xlsx";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
-import { saveAs } from "file-saver";
+
 
 interface Employee {
   id: number;
